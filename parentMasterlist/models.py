@@ -2,8 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-from django.db import models
-
 # Create your models here.
 class Parentmasterlist(models.Model):
     child_nbr = models.IntegerField(null=True, blank=True)

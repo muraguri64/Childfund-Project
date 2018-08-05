@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Upload  Masterlist
+{% endblock  %}
+
+
+{% block jumbotron %}
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Upload MasterList!</h1>
+      <p class="lead text-muted">
+        Excel file in xlsx format
+      </p>
+      <div class="row">
+        
+        <div class=" col-md-4 offset-md-4">
+            
+            <form id="upload_masterlist_excel" class="form-create_blog" method="POST" url="{% url 'upload_masterlist_excel' %}" enctype="multipart/form-data">                
+                {% csrf_token %}    
+                <input type="file" id="masterlist_excel_file" class="form-control-file border" name="excel" required>
+                <br/>                
+            
+                <br/>
+                <button class="btn btn-primary" type="submit">Upload</button>
+                    
+            </form> 
+        </div>
+         
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -30,4 +30,5 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('admin/', admin.site.urls, name="admin"),
     path('parentMasterlist/', include('parentMasterlist.urls')),
+    path('masterlist/', include('masterlist.urls')),
 ] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
